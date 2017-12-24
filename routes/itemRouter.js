@@ -12,7 +12,7 @@ itemRouter.use(bodyParser.json());
 //var Verify = require('./verify');
 
 itemRouter.route('/')
-.all('/', function(req, res, next) {
+.all(function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
   res.header("Access-Control-Allow-Headers", "X-Requested-With");
   next();
