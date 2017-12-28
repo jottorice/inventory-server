@@ -30,6 +30,9 @@ itemRouter.route('/')
 .post(function (req, res, next) {
     console.log('In .post');
     Items.create(req.body, function (err, item) {
+        console.log("In POST create body");
+        console.log("err", err);
+        console.log("item", item);
         if (err) throw err;
         console.log('Item created!');
         var id = item._id;
